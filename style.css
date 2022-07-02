@@ -125,14 +125,36 @@ footer ul {
   padding: 0;
 }
 
-footer a {
-  text-decoration: none;
-  color: var(--clr-light);
-}
-
 .copyright {
   display: flex;
   justify-content: flex-start;
   align-items: center;
   padding-left: 2em;
 }
+
+footer a {
+  text-decoration: none;
+  color: var(--clr-light);
+  position: relative;
+}
+footer a:active {
+  scale: 1.3;
+}
+footer a:hover::after {
+  content: '';
+  width: 100%;
+  height: 2px;
+  background-color: var(--clr-light);
+  position: absolute;
+  bottom: -0.2rem;
+  left: 0;
+  transform: scaleX(1);
+}
+
+/* @media screen and (max-width: 834px) {
+  .top-list ul {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+} */
