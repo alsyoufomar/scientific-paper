@@ -3,41 +3,18 @@
   box-sizing: border-box;
 }
 
-a {
-  text-decoration: none;
-  color: #fff;
-}
-
-ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-li {
-  list-style: none;
-}
-
-h1,
-h2,
-h3,
-h4,
-p {
-  margin: 0;
-  padding: 0;
-}
-
 :root {
   --ff-primary: 'Inter', sans-serif;
+  --ff-sec: charter, Georgia, Cambria, 'Times New Roman', Times, serif;
 
   --fw-reg: 400;
-  --fw-bold: 600;
+  --fw-bold: 700;
 
-  --fs-h1: 5rem;
+  --fs-h1: 2.5rem;
   --fs-h2: 2.5rem;
   --fs-h3: 1.5rem;
   --fs-h4: 1.3rem;
-  --fs-body: 1rem;
+  --fs-body: 1.4rem;
   --fs-intro: 2rem;
   --fs-details: 0.7375rem;
   --fs-info: 0.83rem;
@@ -64,3 +41,67 @@ p {
   --card-w: 22em;
   --btn: 3rem;
 }
+
+h3 {
+  margin-top: 3em;
+  font-family: var(--ff-primary);
+  font-weight: var(--fw-bold);
+}
+
+p {
+  letter-spacing: 0.003em;
+}
+
+body {
+  margin: 0;
+  background-color: var(--clr-light);
+  color: var(--clr-dark);
+  font-family: var(--ff-sec);
+  font-size: var(--fs-body);
+  font-weight: var(--fw-reg);
+  line-height: 1;
+  min-height: 100vh;
+}
+
+/* hero style */
+
+.hero {
+  background: linear-gradient(to top, #272727ba, rgba(91, 66, 66, 0.23)),
+    url(./images/hero.jpg) no-repeat center center;
+  background-size: cover;
+  height: 100vh;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  font-size: var(--fs-h1);
+  font-family: 'Montserrat', sans-serif;
+  text-transform: uppercase;
+  color: var(--clr-light);
+  padding: 2em;
+
+  /* text-shadow: rgba(255, 204, 0, 0.31) 1px 0 10px; */
+}
+
+.research {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: auto;
+  padding: 6em;
+  font-size: var(--fs-body);
+  line-height: var(--line-height);
+}
+
+.image {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 3em;
+  width: 100%;
+}
+
+.image img {
+  /* object-fit: cover; */
+  width: 80%;
+}
+/* .description {
+} */
