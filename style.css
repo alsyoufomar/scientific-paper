@@ -62,6 +62,7 @@ body {
   font-weight: var(--fw-reg);
   line-height: var(--line-height-2);
   min-height: 100vh;
+  /* overflow-x: hidden; */
 }
 
 /* hero style */
@@ -155,6 +156,17 @@ footer a:hover::after {
   bottom: -0.2rem;
   left: 0;
   transform: scaleX(1);
+}
+
+.fade-in {
+  transform: translateY(10vh);
+  transition: opacity 400ms ease-in, transform 400ms ease-in;
+  opacity: 0;
+}
+
+.fade-in.appear {
+  transform: translateY(0);
+  opacity: 1;
 }
 
 @media screen and (max-width: 970px) {
