@@ -303,10 +303,6 @@ body::-webkit-scrollbar {
   .copyright {
     padding-left: 1em;
   }
-  .dark-mode-toggle {
-    width: 1.9em;
-    height: 1.9em;
-  }
 }
 @media screen and (max-width: 480px) {
   :root {
@@ -320,10 +316,6 @@ body::-webkit-scrollbar {
   }
   .copyright {
     padding-left: 0.5em;
-  }
-  .dark-mode-toggle {
-    width: 1.8em;
-    height: 1.8em;
   }
 }
 @media screen and (max-width: 370px) {
