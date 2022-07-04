@@ -3,6 +3,7 @@ const nav = document.querySelector('.fake-nav');
 const hero = document.querySelector('.hero');
 const btn = document.querySelector('.btn');
 const filled = document.querySelector('.progress-bar');
+const darkIcon = document.querySelector('.dark-icon');
 
 const appearOptions = {
   threshold: 0,
@@ -54,3 +55,34 @@ function update() {
 }
 
 update();
+
+let darkMode = localStorage.getItem('darkMode');
+const darkModeToggle = document.querySelector('.dark-mode-toggle');
+
+const enableDarkMode = () => {
+  document.body.classList.add('darkmode');
+  darkIcon.classList.add('fa-sun');
+  darkIcon.classList.remove('fa-moon');
+  localStorage.setItem('darkMode', 'enabled');
+};
+
+const disableDarkMode = () => {
+  document.body.classList.remove('darkmode');
+  darkIcon.classList.add('fa-moon');
+  darkIcon.classList.remove('fa-sun');
+  localStorage.setItem('darkMode', null);
+};
+
+if (darkMode === 'enabled') {
+  enableDarkMode();
+}
+
+darkModeToggle.addEventListener('click', () => {
+  darkMode = localStorage.getItem('darkMode');
+
+  if (darkMode !== 'enabled') {
+    enableDarkMode();
+  } else {
+    disableDarkMode();
+  }
+});
